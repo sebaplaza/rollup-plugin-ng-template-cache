@@ -1,0 +1,39 @@
+{
+	"extends": "@tsconfig/node16/tsconfig.json",
+	"include": [
+		"./src/**/*.ts",
+		"./src/**/*.json",
+		"./src/**/*.d.ts"
+	],
+	"exclude": [
+		"./src/**/*.spec.ts"
+	],
+	"excludeDirectories": [
+		"**/node_modules"
+	],
+	"compilerOptions": {
+		"target": "ESNext",
+		"composite": true /* Enable constraints that allow a TypeScript project to be used with project references. */,
+		"declaration": true,
+		"incremental": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"sourceMap": true /* Create source map files for emitted JavaScript files. */,
+		"declarationMap": true,
+		"noImplicitReturns": true /* Enable error reporting for codepaths that do not explicitly return in a function. */,
+		"noFallthroughCasesInSwitch": true /* Enable error reporting for fallthrough cases in switch statements. */,
+		"noUncheckedIndexedAccess": true /* Include 'undefined' in index signature results */,
+		"noImplicitOverride": true /* Ensure overriding members in derived classes are marked with an override modifier. */ /* Skip type checking all .d.ts files. */,
+		"strictFunctionTypes": true,
+		"strictNullChecks": true,
+		"noImplicitAny": false,
+		"allowSyntheticDefaultImports": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"paths": {
+			"@/*": [
+				"./src/*"
+			]
+		}
+	}
+}
